@@ -1,0 +1,59 @@
+/* fonts size: -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8  */
+
+.font--2 {
+    font-size: .75rem;
+}
+
+.font--1 {
+    font-size: .875rem;
+}
+
+.font-0 {
+    font-size: 1rem;
+}
+
+.font-1 {
+    font-size: 1.125rem;
+}
+
+.font-2 {
+    font-size: 2rem;
+}
+
+.font-3 {
+    font-size: 2.25rem;
+}
+
+.font-4 {
+    font-size: 2.375rem;
+}
+
+.font-5 {
+    font-size: 2.75rem;
+}
+
+.font-6 {
+    font-size: 3rem;
+}
+
+.font-7 {
+    font-size: 3.875rem;
+}
+
+.font-8 {
+    font-size: 5.625rem;
+}
+
+/* fonts wieghts: 1, 2, 3 */
+
+.font-weight-1 {
+    font-weight: 400;
+}
+
+.font-weight-2 {
+    font-weight: 500;
+}
+
+.font-weight-3 {
+    font-weight: 700;
+}
