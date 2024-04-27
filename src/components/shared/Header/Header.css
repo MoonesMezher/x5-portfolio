@@ -11,7 +11,7 @@
     transition: .5s ease;
 }
 
-.mm-header div:first-child {
+.mm-header .left-side {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -31,6 +31,7 @@
     display: flex;
     gap: 1rem;
     list-style: none;
+    transition: 1s ease;
 }
 
 .mm-header ul li {
@@ -41,11 +42,12 @@
     color: white;
     padding: .5rem 0;
     transition: .3s ease;
+    border-bottom: 2px solid transparent;
 }
 
 .mm-header ul li a:hover {
     color: #14b789;
-    border-bottom: 2px solid #14b789;
+    border-bottom-color: #14b789;
 }
 
 .mm-header .icon {
@@ -74,4 +76,138 @@
     color: #14b789;
 }
 
-.mm-header .number {
+.mm-header.changed-header {
+    background-color: white;
+}
+
+.mm-header.changed-header .logo {
+    color: black;
+}
+
+.mm-header.changed-header ul li {
+    color: #717275;
+}
+
+.mm-header.changed-header ul li a {
+    color: #717275;
+}
+
+.mm-header.changed-header ul li a:hover {
+    color: #14b789;
+}
+
+.mm-header.changed-header .icon {
+    background-color: #14b789;
+    color: white;
+}
+
+.mm-header.changed-header .number {
+    color: #14b789;
+    border: 2px solid #14b789;
+}
+
+.mm-header.changed-header .number:hover {
+    background-color: #14b789;
+    color: white;
+}
+
+.mm-header .menu {
+    display: none;
+    font-size: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .mm-header .menu {
+        display: block;
+    }
+    .mm-header ul {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        width: 100%;
+        background-color: white;
+        border-end-end-radius: 8px;
+        border-end-start-radius: 8px;
+        overflow: hidden;
+        transition: .8s;
+        z-index: -1;
+        opacity: 0;
+        height: 0;
+    }
+    .mm-header ul li {
+        padding: .5rem 1rem 0;
+    }
+    
+    .mm-header ul li:last-child {
+        padding-bottom: 1rem;
+    }
+    .mm-header ul li a {
+        color: #717275;
+    }
+    .mm-header {
+        background-color: white;
+    }
+    
+    .mm-header .logo {
+        color: black;
+    }
+    .mm-header ul li a:hover {
+        color: #14b789;
+    }
+    .mm-header .icon {
+        background-color: #14b789;
+        color: white;
+    }
+    .mm-header .number {
+        color: #14b789;
+        border: 2px solid #14b789;
+    }
+    
+    .mm-header .number:hover {
+        background-color: #14b789;
+        color: white;
+    }
+    .mm-header.show-menu ul{
+        top: 88%;
+        height: max-content;
+        opacity: 100%;
+        transition: .8s;
+    }
+}
+
+.mm-header.show-menu ul {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1rem;
+}
+
+@media (min-width: 640px) {
+    .mm-header.show-menu ul {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .mm-header.show-menu ul {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .mm-header.show-menu ul {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) {
+    .mm-header.show-menu ul {
+        max-width: 1280px;
+    }
+}
+@media (min-width: 1536px) {
+    .mm-header.show-menu ul {
+        max-width: 1536px;
+    }
+}
+@media (min-width: 1800px) {
+    .mm-header.show-menu ul {
+        max-width: 80%;
+    }
+}

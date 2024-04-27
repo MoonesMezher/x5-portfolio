@@ -1,0 +1,17 @@
+#1 MOONES MEZHER:
+- Setup project (react vite, react icons, react router dom)
+- Create the repo
+- Handle project structure src/(api, assets, components, context, hooks, pages, types)
+- Handle pages layout (Header, Footer)
+- Seperate the project to small tasks
+- Design all components which started in className has mm-
+
+#2 NEVEN GHASOUN:
+
+#3 DIANA HAMAMEH:
+
+#4 RAMI ALZEND:
+
+#5 FIRAS ALSEMGY:
+
+#6 ABD ESMAEEL:
