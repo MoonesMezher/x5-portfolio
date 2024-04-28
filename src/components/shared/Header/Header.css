@@ -1,6 +1,7 @@
 .mm-header {
     position: fixed;
     border-radius: 12px;
+    z-index: 50;
     left: 50%;
     top: 1rem;
     transform: translateX(-50%);
@@ -34,22 +35,6 @@
     transition: 1s ease;
 }
 
-.mm-header ul li {
-    color: white;
-}
-
-.mm-header ul li a {
-    color: white;
-    padding: .5rem 0;
-    transition: .3s ease;
-    border-bottom: 2px solid transparent;
-}
-
-.mm-header ul li a:hover {
-    color: #14b789;
-    border-bottom-color: #14b789;
-}
-
 .mm-header .icon {
     display: flex;
     justify-content: baseline;
@@ -78,22 +63,11 @@
 
 .mm-header.changed-header {
     background-color: white;
+    box-shadow: 1px 2px 10px -1px #717275;
 }
 
 .mm-header.changed-header .logo {
     color: black;
-}
-
-.mm-header.changed-header ul li {
-    color: #717275;
-}
-
-.mm-header.changed-header ul li a {
-    color: #717275;
-}
-
-.mm-header.changed-header ul li a:hover {
-    color: #14b789;
 }
 
 .mm-header.changed-header .icon {

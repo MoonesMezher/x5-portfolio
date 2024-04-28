@@ -1,14 +1,17 @@
 import { PiPhone } from "react-icons/pi"
-import { Link, NavLink } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import './Header.css'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MdMenu } from "react-icons/md"
 import { CgClose } from "react-icons/cg"
+import MainLink from "../MainLink/MainLink"
 
 const Header = () => {
     let [changeColor, setChangeColor] = useState<boolean>(false);
 
     let [showMenu, setShowMenu] = useState<boolean>(false);
+
+    let { pathname } = useLocation();
 
     const links = [
         {
@@ -23,7 +26,7 @@ const Header = () => {
             title: 'DASHBOARD',
             url: '/dashboard'
         },
-    ]
+    ]    
 
     window.onscroll = function() { 
         setTimeout(() => {
@@ -31,12 +34,17 @@ const Header = () => {
         }, 500);
     };
 
+    useEffect(() => {
+        setShowMenu(false);
+        window.scrollTo(0,0)
+    }, [pathname]);
+
     return (
         <header className={`mm-header main-container ${changeColor ? 'changed-header': ''} ${showMenu && 'show-menu' }`}>
             <div className="left-side">
                 <Link to={'/'} className="logo font-5">X5</Link>
                 <ul>
-                    {links.map((e, i) => <li key={i}><NavLink to={e.url} className={'active-link font--1'}>{e.title}</NavLink></li>)}
+                    {links.map((e, i) => <MainLink key={i} info={e}/>)}
                 </ul>
             </div>
             <div>
