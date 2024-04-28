@@ -2,6 +2,7 @@
 - Setup project (react vite, react icons, react router dom)
 - Create the repo
 - Handle project structure src/(api, assets, components, context, hooks, pages, types)
+- Create the main classes in css like (main-container, page)
 - Handle pages layout (Header, Footer)
 - Seperate the project to small tasks
 - Design all components which started in className has mm-

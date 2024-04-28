@@ -1,5 +1,5 @@
 import { PiPhone } from "react-icons/pi"
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import './Header.css'
 import { useState } from "react"
 import { MdMenu } from "react-icons/md"
@@ -13,23 +13,15 @@ const Header = () => {
     const links = [
         {
             title: 'HOME',
-            url: '#'
+            url: '/'
         },
         {
-            title: 'ABOUT',
-            url: '#'
+            title: 'LOGIN',
+            url: '/login'
         },
         {
-            title: 'SERVICES',
-            url: '#'
-        },
-        {
-            title: 'PROJECTS',
-            url: '#'
-        },
-        {
-            title: 'CONTACT',
-            url: '#'
+            title: 'DASHBOARD',
+            url: '/dashboard'
         },
     ]
 
@@ -41,10 +33,8 @@ const Header = () => {
 
     return (
         <header className={`mm-header main-container ${changeColor ? 'changed-header': ''} ${showMenu && 'show-menu' }`}>
-            {!showMenu ?<MdMenu className="menu" onClick={() => setShowMenu(true)}/>
-                :<CgClose className="menu" onClick={() => setShowMenu(false)}/>}
             <div className="left-side">
-                <span className="logo font-5">X5</span>
+                <Link to={'/'} className="logo font-5">X5</Link>
                 <ul>
                     {links.map((e, i) => <li key={i}><NavLink to={e.url} className={'active-link font--1'}>{e.title}</NavLink></li>)}
                 </ul>
@@ -52,6 +42,8 @@ const Header = () => {
             <div>
                 <PiPhone className="icon"/>
                 <span className="number">120-240-9600</span>
+                {!showMenu ?<MdMenu className="menu" onClick={() => setShowMenu(true)}/>
+                    :<CgClose className="menu" onClick={() => setShowMenu(false)}/>}
             </div>
         </header>
     )

@@ -2,7 +2,7 @@ import './Home.css'
 
 const Home = () => {
     return (
-        <section className="home bg-purple">
+        <section className="home page">
             Home
         </section>
     )
