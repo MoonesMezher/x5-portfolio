@@ -1,5 +1,6 @@
 #1 MOONES MEZHER:
 - Setup project (react vite, react icons, react router dom)
+- Install all required (images, fonts)
 - Create the repo
 - Handle project structure src/(api, assets, components, context, hooks, pages, types)
 - Create the main classes in css like (main-container, page)

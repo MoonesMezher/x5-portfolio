@@ -1,0 +1,42 @@
+.mm-companies {
+    padding: 7rem;
+    background-color: white;
+}
+
+.mm-companies h1 {
+    text-align: center;
+    margin: 0 0 4rem;
+}
+
+.mm-companies-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.mm-companies-grid img {
+    object-fit: cover;
+    max-width: 100px;
+    height: fit-content;
+    transition: .1s ease;
+}
+
+.mm-companies-grid img:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+    .mm-companies-grid {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mm-companies-grid img {
+        width: 100%;
+    }
+}
+

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom"
 import './MainLink.css'
+import { TMainLinkProps } from "../../../types";
 
-const MainLink = ( { info } : { info: { url: string, title: string } } ) => {
+const MainLink = ( { info } : TMainLinkProps ) => {
     const [isActive, setIsActive] = useState<boolean>(false)
 
     let { pathname } = useLocation();

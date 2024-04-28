@@ -54,7 +54,7 @@ const Header = () => {
                     :<CgClose className="menu" onClick={() => setShowMenu(false)}/>}
             </div>
         </header>
-    )
+)
 }
 
 export default Header

@@ -10,6 +10,7 @@
     align-items: center;
     padding: 1rem 2rem;
     transition: .5s ease;
+    width: 100%;
 }
 
 .mm-header .left-side {
