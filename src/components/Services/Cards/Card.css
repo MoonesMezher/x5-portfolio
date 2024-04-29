@@ -5,6 +5,7 @@
   position: relative;
   padding: 40px 40px 240px 40px;
   width: 33.5vw;
+  max-height: 520px;
   flex: 0 1 calc(50% - 20px);
   transition: all 0.3s;
   overflow: hidden;
