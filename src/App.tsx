@@ -11,18 +11,20 @@ import Login from './pages/Login/Login';
 
 function App() {
   return (
-    <main>
+    <div>
+      <main>
         <BrowserRouter>
-          <Header/>
+          <Header />
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/dashboard' element={<Dashboard/>}/>
           </Routes>
-          <Footer/>
+          <Footer />
         </BrowserRouter>
-    </main>
-  )
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
