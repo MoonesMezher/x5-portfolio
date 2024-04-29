@@ -1,6 +1,6 @@
 .services_title {
   margin: 0 15%;
-  height: 30vh;
+  height: 200px;
   margin-bottom: 3rem;
   padding: 10px 30px;
   display: flex;
@@ -25,7 +25,7 @@
 
 @media (min-width: 1200px) {
   .services_title {
-    height: 25vh;
+    height: 200px;
   }
 
   .services_title img {
