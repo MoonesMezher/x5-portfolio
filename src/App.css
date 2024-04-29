@@ -4,6 +4,11 @@
   padding: 1rem;
 }
 
+.page {
+  min-height: 100vh;
+  background-color: #535da1;
+}
+
 @media (min-width: 640px) {
   .main-container {
       max-width: 640px;

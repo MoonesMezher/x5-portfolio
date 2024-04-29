@@ -1,0 +1,1 @@
+export type TMainLinkProps = { info: { url: string, title: string } };

@@ -1,37 +1,32 @@
 import { PiPhone } from "react-icons/pi"
-import { NavLink } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import './Header.css'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MdMenu } from "react-icons/md"
 import { CgClose } from "react-icons/cg"
+import MainLink from "../MainLink/MainLink"
 
 const Header = () => {
     let [changeColor, setChangeColor] = useState<boolean>(false);
 
     let [showMenu, setShowMenu] = useState<boolean>(false);
 
+    let { pathname } = useLocation();
+
     const links = [
         {
             title: 'HOME',
-            url: '#'
+            url: '/'
         },
         {
-            title: 'ABOUT',
-            url: '#'
+            title: 'LOGIN',
+            url: '/login'
         },
         {
-            title: 'SERVICES',
-            url: '#'
+            title: 'DASHBOARD',
+            url: '/dashboard'
         },
-        {
-            title: 'PROJECTS',
-            url: '#'
-        },
-        {
-            title: 'CONTACT',
-            url: '#'
-        },
-    ]
+    ]    
 
     window.onscroll = function() { 
         setTimeout(() => {
@@ -39,22 +34,27 @@ const Header = () => {
         }, 500);
     };
 
+    useEffect(() => {
+        setShowMenu(false);
+        window.scrollTo(0,0)
+    }, [pathname]);
+
     return (
         <header className={`mm-header main-container ${changeColor ? 'changed-header': ''} ${showMenu && 'show-menu' }`}>
-            {!showMenu ?<MdMenu className="menu" onClick={() => setShowMenu(true)}/>
-                :<CgClose className="menu" onClick={() => setShowMenu(false)}/>}
             <div className="left-side">
-                <span className="logo font-5">X5</span>
+                <Link to={'/'} className="logo font-5">X5</Link>
                 <ul>
-                    {links.map((e, i) => <li key={i}><NavLink to={e.url} className={'active-link font--1'}>{e.title}</NavLink></li>)}
+                    {links.map((e, i) => <MainLink key={i} info={e}/>)}
                 </ul>
             </div>
             <div>
                 <PiPhone className="icon"/>
                 <span className="number">120-240-9600</span>
+                {!showMenu ?<MdMenu className="menu" onClick={() => setShowMenu(true)}/>
+                    :<CgClose className="menu" onClick={() => setShowMenu(false)}/>}
             </div>
         </header>
-    )
+)
 }
 
 export default Header
