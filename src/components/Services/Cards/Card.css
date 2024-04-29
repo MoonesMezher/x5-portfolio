@@ -1,0 +1,126 @@
+.service_card {
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  position: relative;
+  padding: 40px 40px 240px 40px;
+  width: 33.5vw;
+  flex: 0 1 calc(50% - 20px);
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.service_card:hover {
+  border: 2px solid #14b789;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  transform: scale(1.025);
+}
+
+.service_top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.service_price_wrapper {
+  position: relative;
+  display: inline-block;
+  background-color: #535da1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.service_price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #535da1;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.services-price-overlay {
+  background: #14b789;
+  border-bottom-left-radius: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.brief p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  color: #717275;
+  font-size: 1.1rem;
+  padding: 20px 0;
+}
+
+.service_card .service_top h3 {
+  font-size: 2.5rem;
+}
+
+.service_card a {
+  color: #717275;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1.5px solid #dbdbdb;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 12rem;
+  transition: 0.3s ease;
+}
+
+.service_card a:hover {
+  background-color: #14b789;
+  color: white;
+}
+
+.service_card .icon {
+  color: rgb(46, 46, 46);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16rem;
+  width: 13rem;
+  transition: 0.3s ease;
+  font-size: 90px;
+  position: absolute;
+  bottom: -22px;
+  right: -22px;
+  border: 1.5px solid #dbdbdb;
+  border-radius: 15px;
+  transform: rotate(-35deg);
+}
+
+.service_card:hover .icon {
+  background-color: #14b789;
+  color: white;
+}
+
+.service_card:hover .service_price {
+  background-color: #14b789;
+  color: white;
+}
+
+.service_card:hover .services-price-overlay {
+  background-color: #535da1;
+}

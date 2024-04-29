@@ -1,0 +1,26 @@
+.services_title{
+    margin: 0 15%;
+    height: 30vh;
+    margin-bottom: 3rem;
+    /* remove down before sending */
+    margin-top: 80px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    background-color: #14b789;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.services_title img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.services_title h2 {
+    margin-left: 1.5rem;
+    color: #ffffff;
+    font-size: 3rem;
+}
