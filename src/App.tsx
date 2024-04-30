@@ -4,16 +4,19 @@ import './assets/css/layout.css'
 import './App.css'
 import Home from './pages/Home/Home';
 import Header from './components/shared/Header/Header';
+
 import Footer from './components/shared/Footer/Footer';
 import Dashboard from './pages/Dashboard/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login/Login';
+import Hero from './components/home/Hero/Hero';
 
 function App() {
   return (
     <main>
         <BrowserRouter>
           <Header/>
+          <Hero/>
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>

@@ -1,0 +1,77 @@
+
+.hero{
+    position: relative;
+    height: 75vh;
+}
+
+
+
+
+section.hero h2.ver{
+    background:rgb(0, 234, 255);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+    border-radius: 60%;
+    padding: 8px 24px;
+    width: fit-content;
+}
+
+section.hero .avatar{
+    width: 88px;
+    border-radius: 50%;
+    border: 1px solid darkorange;
+    padding: 1px;
+
+    box-shadow: 2px 2px 40px rgba(203, 200, 0.568) inset;
+
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+   
+}
+
+
+.hero .info{
+    font-size: 42px;
+    font-weight: 350;
+    text-transform: uppercase;
+    color:rgb(131, 229, 131);
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    margin-right: 20rem;
+    
+    
+}
+
+
+.hero  .button {
+    background-color: purple;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    border-radius: 20px;
+    padding-left: 0px;
+    width: fit-content;
+    padding: 1rem;
+}
+
+
+.hero  .button:hover{
+    background-color: rgb(131, 229, 131);
+    color:red;
+}
+
+section.hero .avatar2d{
+    float: left;
+    width: 500px;
+    margin-left: 900px;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 1px;
+
+    box-shadow: 2px 2px 40px rgba(203, 200, 0.568) inset;
+    
+
+   
+}
