@@ -13,19 +13,25 @@ import Hero from './components/home/Hero/Hero';
 
 function App() {
   return (
-    <main>
+    <div>
+      <main>
         <BrowserRouter>
+<<<<<<< HEAD
           <Header/>
           <Hero/>
+=======
+          <Header />
+>>>>>>> origin/main
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/dashboard' element={<Dashboard/>}/>
           </Routes>
-          <Footer/>
+          <Footer />
         </BrowserRouter>
-    </main>
-  )
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
