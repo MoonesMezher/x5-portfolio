@@ -1,0 +1,101 @@
+.information {
+    background-color: #f9f9f9 ;
+    border : solid 1px black;
+}
+.information .main-container .content {
+    display: flex;
+    flex-direction: row;
+
+}
+.information .main-container .content .table  {
+    width: 50%;
+}
+.information .main-container .content .table .content-table {
+    border-collapse: collapse;
+    font-size: larger;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+.information .main-container .content .table  .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .information .main-container .content .table  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .information .main-container .content .table .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .information .main-container .content .table .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .information .main-container .content .table .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+.information .main-container .content .numbers  {
+  width: 50%;
+
+}
+.information .main-container .content .numbers .featured-stats {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.information .main-container .content .numbers .featured-stat {
+  padding: 15px; 
+  text-align: left; 
+}
+
+.information .main-container .content .numbers .featured-numbers {
+  font-size: 2em; 
+  font-weight: bold;
+}
+
+.information .main-container .content .numbers .featured-text {
+  font-size: 1.2em;
+  margin-top: 5px; 
+  color:#009879;
+}
+.information .main-container .content .numbers .border_bottom{
+  border-bottom: 1px #9f9c9c94 solid;
+}
+.information .main-container .content .numbers .border_right{
+  border-right: 1px #9f9c9c94 solid;
+}
+
+@media (min-width: 768px) {
+  .information .main-container .content .numbers .featured-stat {
+    width: 25%;
+  }
+  .information .main-container .content .numbers .border_bottom{
+    border-bottom: none;
+  }
+  .information .main-container .content .numbers .border_right{
+    border-right:none;
+  }
+}
+
+@media (min-width: 992px) {
+  .information .main-container .content .numbers .featured-stat {
+    width: 35.33%;
+  }
+  .information .main-container .content .numbers .border_bottom{
+    border-bottom: 1px #9f9c9c94 solid;
+  }
+  .information .main-container .content .numbers .border_right{
+    border-right: 1px #9f9c9c94 solid;
+  }
+}
