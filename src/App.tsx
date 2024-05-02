@@ -9,7 +9,7 @@ import Footer from './components/shared/Footer/Footer';
 import Dashboard from './pages/Dashboard/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login/Login';
-import Hero from './components/home/Hero/Hero';
+
 
 function App() {
   return (

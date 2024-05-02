@@ -1,0 +1,23 @@
+.section-header{
+    margin-top: 2rem;
+    background: #14B789;
+    border-radius: 10px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 66.66666667%;
+    cursor: pointer;
+}
+.section-header img{
+    border-radius: 100px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+.section-header h1{
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+}
