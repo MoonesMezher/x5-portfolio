@@ -1,0 +1,104 @@
+.information {
+    background-color: #f9f9f9;
+    padding: 4rem 0;
+}
+.information .main-container .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.information .main-container .content .table  {
+    width: 50%;
+}
+
+.information .main-container .content .table .content-table {
+    border-collapse: collapse;
+    font-size: larger;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+.information .main-container .content .table  .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.information .main-container .content .table  .content-table tbody tr {
+  transform: .3s ease;
+}
+  .information .main-container .content .table  .content-table tbody tr:hover {
+    color: #009879;
+  }
+  .information .main-container .content .table  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .information .main-container .content .table .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .information .main-container .content .table .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .information .main-container .content .table .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+.information .main-container .content .numbers  {
+  width: 50%;
+}
+.information .main-container .content .numbers .featured-stats {
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.information .main-container .content .numbers .featured-stat {
+  padding: 15px; 
+  text-align: left; 
+  flex-basis: 45%;
+}
+
+.information .main-container .content .numbers .featured-numbers {
+  font-size: 2em; 
+  font-weight: bold;
+}
+
+.information .main-container .content .numbers .featured-text {
+  font-size: 1.2em;
+  margin-top: 5px; 
+  color:#009879;
+}
+
+.main-container .content .numbers .border_right{
+  border-right: 1px #9f9c9c94 solid;
+}
+
+
+@media screen and (max-width: 1060px) {
+  .information .content {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 3rem;
+  }
+  .information .main-container .content .table,
+  .information .main-container .content .numbers  {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .information .main-container .content .numbers .featured-stat {
+    flex-basis: 100% !important;
+    text-align: center;
+  }  
+}
+

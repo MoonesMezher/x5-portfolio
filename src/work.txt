@@ -1,0 +1,24 @@
+#1 MOONES MEZHER:
+- Setup project (react vite, react icons, react router dom)
+- Install all required (images, fonts)
+- Create the repo
+- Handle project structure src/(api, assets, components, context, hooks, pages, types)
+- Create the main classes in css like (main-container, page)
+- Handle pages layout (Header, Footer)
+- Seperate the project to small tasks
+- Design all components which started in className has mm-
+- Design shared components like (MainButton, MainTitle, MainLink, MainInput)
+- Create a helper (stringLimit)
+
+#2 NEVEN GHASOUN:
+-Design MyProject section 
+-design CardProject components 
+
+
+#3 DIANA HAMAMEH:
+
+#4 RAMI ALZEND:
+
+#5 FIRAS ALSEMGY:
+
+#6 ESMAEEL ABD:

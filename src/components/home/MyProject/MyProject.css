@@ -1,0 +1,14 @@
+.ne-my-project{
+    padding: 5rem 0;
+}
+
+.ne-my-project .main-container {
+    padding: 0;
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+}
