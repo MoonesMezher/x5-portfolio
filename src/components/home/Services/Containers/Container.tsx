@@ -43,8 +43,9 @@ const Container = () => {
       icon: <FaGoogle />,
     },
   ];
+
   return (
-    <div className="service_container">
+    <div className="service_container main-container">
       {json.map((element, index) => {
         return (
           <div key={index}>

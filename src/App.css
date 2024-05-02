@@ -6,7 +6,6 @@
 
 .page {
   min-height: 100vh;
-  background-color: #535da1;
 }
 
 @media (min-width: 640px) {

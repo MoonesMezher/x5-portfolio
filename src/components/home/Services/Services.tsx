@@ -1,11 +1,13 @@
 import Container from './Containers/Container'
 import './Services.css'
-import Title from './title/Title'
+import MainTitle from '../../shared/MainTitle/MainTitle'
+import img from '../../../assets/images/home/handshake.jpg'
+
 
 const Services = () => {
   return (
     <div className='services'>
-        <Title/>
+        <MainTitle title='Services' img={img} style="main-container"/>
         <Container/>
     </div>
   )

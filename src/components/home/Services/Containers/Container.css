@@ -1,0 +1,15 @@
+.service_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.service_container.main-container {
+  padding-top: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .service_container {
+    grid-template-columns: 1fr;
+  }
+}
