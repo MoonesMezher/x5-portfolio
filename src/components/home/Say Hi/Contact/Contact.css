@@ -1,0 +1,15 @@
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .contact {
+    display: block;
+    background-color: #f9f9f9;
+  }
+}

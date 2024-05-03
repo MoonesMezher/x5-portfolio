@@ -1,14 +1,8 @@
-import { ReactNode } from "react";
+import { TCardprops } from "../../../../types";
 import "./Card.css";
-interface Cardprops {
-  service: string;
-  price: string;
-  brief: string;
-  link: string;
-  icon: ReactNode;
-}
+import limitString from '../../../../helpers/limitString'
 
-const Card = ({ service, price, brief, link, icon }: Cardprops) => {
+const Card = ({ service, price, brief, link, icon }: TCardprops) => {
   return (
     <div className="service_card">
       <div className="service_top">
@@ -21,7 +15,7 @@ const Card = ({ service, price, brief, link, icon }: Cardprops) => {
         </div>
       </div>
       <div className="brief">
-        <p>{brief}</p>
+        <p>{limitString(brief,80)}</p>
       </div>
       <a href="#">{link}</a>
       <div className="icon">{icon}</div>

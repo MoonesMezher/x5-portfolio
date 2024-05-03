@@ -1,6 +1,8 @@
+import './Login.css'
+
 const Login = () => {
     return (
-        <section className="page">Login</section>
+        <section className="login page">Login</section>
     )
 }
 

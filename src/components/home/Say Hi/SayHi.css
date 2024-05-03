@@ -1,0 +1,19 @@
+.sayhi {
+  margin: 0 auto;
+  width: 100%;
+  padding: 120px 8%;
+  background-color: #f9f9f9;
+}
+
+.sayhi_title {
+  width: 50%;
+}
+
+.sayhi_title .main-container {
+  margin: 0;
+}
+
+::selection {
+  background-color: #14b789;
+  color: white;
+}
