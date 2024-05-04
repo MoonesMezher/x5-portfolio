@@ -1,4 +1,5 @@
 import "./information.css";
+
 const Information = () => {
   return (
     <div className="information">
@@ -33,22 +34,22 @@ const Information = () => {
           </div>
           <div className="numbers">
             <div className="featured-stats">
-                <div className="featured-stat">
-                  <strong className="featured-numbers">20+</strong>
-                  <p className="featured-text">Years of Experiences</p>
-                </div>
-                <div className="featured-stat">
-                  <strong className="featured-numbers">245</strong>
-                  <p className="featured-text">Happy Customers</p>
-                </div>
-                <div className="featured-stat">
-                  <strong className="featured-numbers">640</strong>
-                  <p className="featured-text">Project Finished</p>
-                </div>
-                <div className="featured-stat">
-                  <strong className="featured-numbers">72+</strong>
-                  <p className="featured-text">Digital Awards</p>
-                </div>
+              <div className="featured-stat">
+                <strong className="featured-numbers">20+</strong>
+                <p className="featured-text">Years of Experiences</p>
+              </div>
+              <div className="featured-stat">
+                <strong className="featured-numbers">245</strong>
+                <p className="featured-text">Happy Customers</p>
+              </div>
+              <div className="featured-stat">
+                <strong className="featured-numbers">640</strong>
+                <p className="featured-text">Project Finished</p>
+              </div>
+              <div className="featured-stat">
+                <strong className="featured-numbers">72+</strong>
+                <p className="featured-text">Digital Awards</p>
+              </div>
             </div>
           </div>
         </div>
