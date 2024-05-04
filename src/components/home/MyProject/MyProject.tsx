@@ -26,16 +26,18 @@ function MyProject() {
 
   return (
     <div className="ne-my-project" id="projects">
-      <MainTitle img={img} title="Projects" style="main-container"/>
-      <div className="card-wrapper main-container">
-        {projects.map((e, i) => (
-          <CardProject
+      <div className="main-container">
+        <MainTitle img={img} title="Projects" style="project-title main-container"/>
+        <div className="card-wrapper">
+          {projects.map((e, i) => (
+            <CardProject
             key={i}
             category={e.category}
             title={e.title}
             image={e.image}
-          />
-        ))}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

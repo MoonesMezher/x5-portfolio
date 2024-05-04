@@ -13,3 +13,5 @@ export interface TCardprops {
 }
 
 export type TLimitStringHelper = (text: string, limit: number) => string;
+
+export type TMainInputProps = { label?: string, textarea?: boolean, type?: string, required?: boolean, placeholder?: string, value: string, setValue: any, errorRequest?: any, filed: string }

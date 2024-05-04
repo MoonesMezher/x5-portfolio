@@ -9,6 +9,7 @@
 - Design all components which started in className has mm-
 - Design shared components like (MainButton, MainTitle, MainLink, MainInput)
 - Create a helper (stringLimit)
+- Make all components fit with eact other
 
 #2 NEVEN GHASOUN:
 
