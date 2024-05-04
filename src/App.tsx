@@ -5,10 +5,11 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import Header from "./components/shared/Header/Header";
 
-import Footer from "./components/shared/Footer/Footer";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./pages/Login/Login";
+
+import Footer from './components/shared/Footer/Footer';
+import Dashboard from './pages/Dashboard/Dashboard'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './pages/Login/Login';
 
 function App() {
   return (
