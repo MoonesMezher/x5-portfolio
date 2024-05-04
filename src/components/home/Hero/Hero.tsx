@@ -2,7 +2,6 @@ import "./Hero.css";
 import Img1 from "../../../assets/images/home/happy-bearded-young-mannn.jpg";
 import Img2 from "../../../assets/images/home/portrait-happy.png";
 import MainButton from "../../shared/MainButton/MainButton";
-
 const Hero = () => {
   return (
     <div className="hero page main-container">
