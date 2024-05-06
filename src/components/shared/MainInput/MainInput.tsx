@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 import { TMainInputProps } from '../../../types'
 import './MainInput.css'
 
@@ -12,7 +13,7 @@ const MainInput = ( { label, textarea, type, required, placeholder, value, setVa
                 : required? <input type={type} name={filed} placeholder={placeholder} value={value} className={`${errorRequest?.hasOwnProperty(filed) && 'error'}`} autoFocus={errorRequest?.hasOwnProperty(filed)} onChange={(e) => setValue(e.target.value)} required/>
                     : <input type={type} name={filed} placeholder={placeholder} value={value} className={`${errorRequest?.hasOwnProperty(filed) && 'error'}`} autoFocus={errorRequest?.hasOwnProperty(filed)} onChange={(e) => setValue(e.target.value)}/>
             }
-            {errorRequest.hasOwnProperty(filed) && <p className='error_note'>{errorRequest[filed]}</p>}
+            {errorRequest?.hasOwnProperty(filed) && <p className='error_note'>{errorRequest[filed]}</p>}
         </div>
     )
 }
