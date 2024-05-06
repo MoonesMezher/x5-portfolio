@@ -1,54 +1,48 @@
+// import { useState } from "react";
+// import CrudTabel from "./CrudTable/CrudTabel";
+// import Modal from "./CrudTable/Modal";
 import { useState } from "react";
-import CrudTabel from "./CrudTable/CrudTabel";
-import Modal from "./CrudTable/Modal";
+import MainButton from "../../components/shared/MainButton/MainButton";
 import "./Dashboard.css";
+import Alert from "../../components/shared/Alert/Alert";
+import axios from "axios";
+import API from "../../api/axios";
+import { useAdminContext } from "../../hooks/useAdminContext";
+import { useNavigate } from "react-router";
 
 const Dashboard = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [rows, setRows] = useState([
-    { id: "id 1", name: "this is the first id", category: "test" },
-    { id: "id 2", name: "this is the second id", category: "test" },
-    { id: "id 3", name: "this is the third id", category: "test" },
-  ]);
-  const [rowToEdit, setRowToEdit] = useState(null);
-  const handleDeleteRow = (targetIndex) => {
-    setRows(rows.filter((_, idx) => idx !== targetIndex));
-  };
-  const handleSubmit = (newRow) => {
-    rowToEdit === null
-      ? setRows([...rows, newRow])
-      : setRows(
-          rows.map((curRow, idx) => {
-            if (idx !== rowToEdit) return curRow;
+  const [alert, setAlert] = useState<boolean>(false);
 
-            return newRow;
-          })
-        );
-  };
-  const handleEditRow = (idx) => {
-    setRowToEdit(idx);
-    setModalOpen(true);
-  };
+  const { state, dispatch } = useAdminContext();
+
+  const navigate = useNavigate();
+  const handleNoOption = () => {
+    setAlert(false)
+  }
+
+  const handleYesOption = () => {
+    axios.post(API.POST.logout)
+      .then(res => {
+        if(!res.data.admin) {
+          dispatch({ type: "LOGOUT" })
+          navigate('/');
+        }
+      });
+  }
+
   return (
     <section className="dashboard page">
-      <CrudTabel
-        rows={rows}
-        deleteRow={handleDeleteRow}
-        editRow={handleEditRow}
-      />
-      <button className="btn" onClick={() => setModalOpen(true)}>
-        Add
-      </button>
-      {modalOpen && (
-        <Modal
-          closeModal={() => {
-            setModalOpen(false);
-            setRowToEdit(null);
-          }}
-          onSubmit={handleSubmit}
-          defaultValue={rowToEdit !== null && rows[rowToEdit]}
-        />
-      )}
+        <div className="main-container">
+          <h1>Hello Admin</h1>
+          <div className="actions">
+            <MainButton title="Projects" url="/dashboard/projects"/>
+            <MainButton title="Messages" url="/dashboard/messages"/>
+            <div onClick={() => setAlert(true)}>
+              <MainButton title="Logout" url="#"/>
+            </div>
+          </div>
+        </div>
+        { alert && <Alert message="Are you sure you want logout?" handleNoOption={handleNoOption} handleYesOption={handleYesOption}/> }
     </section>
   );
 };

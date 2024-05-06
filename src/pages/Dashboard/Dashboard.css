@@ -3,16 +3,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;   
+    position: relative; 
 }
-.btn{
- 
-    margin-top: 1rem;
-    background-color: #1d4ed8;
-    color:#fff;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    border:none;
-    cursor: pointer;
+
+.dashboard h1 {
+    text-align: center;
+    margin-bottom: 5rem;color: white;
+}
+
+.dashboard .actions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.dashboard .main-button {
+    background-color: #14b789;
+}
+
+.dashboard .main-button:hover {
+    background-color: #535da1;    
+}
+
+@media screen and (max-width: 500px) {
+    .dashboard .actions {
+        flex-direction: column;
+        align-items: center;
+    }
 }

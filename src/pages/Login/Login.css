@@ -6,9 +6,6 @@
 }
 
 .ne-login-card{
-    background: #e9eaeb;
-    border: 2px solid #fff;
-    border-radius: 20px;
     position: relative;
     overflow: hidden;
     padding: 40px;
@@ -30,4 +27,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.ne-login-card .login-btn .main-button {
+    background-color: #14b789;
+}
+
+.ne-login-card .login-btn .main-button:hover {
+    background-color: #535da1;
 }

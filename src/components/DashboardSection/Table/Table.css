@@ -1,0 +1,51 @@
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+}
+
+.table thead th {
+    background-color: #14b789;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.table thead th:last-child {
+    text-align: center;
+}
+
+.table tbody tr {
+    background-color: #f2f2f2;
+    opacity: 90%;
+}
+
+.table tbody tr:hover {
+    opacity: 100%;
+}
+
+.table td {
+    padding: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actions svg {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.actions svg.trash {
+    color: red;
+}
+
+.actions svg.edit {
+    color: chocolate;
+}

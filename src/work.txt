@@ -7,9 +7,12 @@
 - Handle pages layout (Header, Footer)
 - Seperate the project to small tasks
 - Design all components which started in className has mm-
-- Design shared components like (MainButton, MainTitle, MainLink, MainInput)
+- Design shared components like (MainButton, MainTitle, MainLink, MainInput, Alert)
 - Create a helper (stringLimit)
 - Make all components fit with eact other
+- Create Admin context
+- Handle login and logout functions (with api)
+- Create (dashboard, dashboardSection)
 
 #2 NEVEN GHASOUN:
 -Design MyProject section 

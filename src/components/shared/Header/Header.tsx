@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { MdMenu } from "react-icons/md"
 import { CgClose } from "react-icons/cg"
 import MainLink from "../MainLink/MainLink"
+import { useAdminContext } from "../../../hooks/useAdminContext"
 
 const Header = () => {
     let [changeColor, setChangeColor] = useState<boolean>(false);
@@ -13,7 +14,20 @@ const Header = () => {
 
     let { pathname } = useLocation();
 
-    const links = [
+    const { state } = useAdminContext();
+
+    const { admin } = state;
+
+    const links = admin? [
+        {
+            title: 'HOME',
+            url: '/'
+        },
+        {
+            title: 'DASHBOARD',
+            url: '/dashboard'
+        },
+    ] : [
         {
             title: 'HOME',
             url: '/'
@@ -21,12 +35,9 @@ const Header = () => {
         {
             title: 'LOGIN',
             url: '/login'
-        },
-        {
-            title: 'DASHBOARD',
-            url: '/dashboard'
-        },
-    ]    
+        }
+    ];  
+
 
     window.onscroll = function() { 
         setTimeout(() => {
