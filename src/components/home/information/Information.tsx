@@ -1,5 +1,4 @@
 import "./information.css";
-
 const Information = () => {
   return (
     <div className="information">

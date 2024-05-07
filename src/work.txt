@@ -11,6 +11,9 @@
 - Create a helper (stringLimit)
 
 #2 NEVEN GHASOUN:
+-Design MyProject section 
+-design CardProject components 
+
 
 #3 DIANA HAMAMEH:
 
