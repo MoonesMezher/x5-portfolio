@@ -2,49 +2,57 @@ import { FaInstagram, FaPinterest, FaTwitter, FaYoutube } from "react-icons/fa";
 import "./ContactInfo.css";
 
 const ContactInfo = () => {
+  const links = [
+    {
+      title: 'Websites',
+      url: '#',
+    },
+    {
+      title: 'Branding',
+      url: '#',
+    },
+    {
+      title: 'Ecommerce',
+      url: '#',
+    },
+    {
+      title: 'SEO',
+      url: '#',
+    },
+  ];
+
+  const icons = [
+    {
+      icon: <FaTwitter />,
+      url: '#',
+    },
+    {
+      icon: <FaInstagram />,
+      url: '#',
+    },
+    {
+      icon: <FaPinterest />,
+      url: '#',
+    },
+    {
+      icon: <FaYoutube />,
+      url: '#',
+    },
+  ];
+
   return (
     <div className="contactinfo">
       <div className="leftcolumn">
         <div className="first_row">
           <strong>SERVICES</strong>
           <ul>
-            <li>
-              <a href="#">Websites</a>
-            </li>
-            <li>
-              <a href="#">Branding</a>
-            </li>
-            <li>
-              <a href="#">Ecommerce</a>
-            </li>
-            <li>
-              <a href="#">SEO</a>
-            </li>
+            {links.map((e, i) => <li key={i}><a href={e.url}>{e.title}</a></li>)}
           </ul>
         </div>
         <div className="second_row">
           <strong>STAY CONNECTED</strong>
           <ul>
-            <li>
-              <a href="#">
-                <FaTwitter />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FaInstagram />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FaPinterest />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FaYoutube />
-              </a>
-            </li>
+            {icons.map((e, i) => <li key={i}><a href={e.url}>{e.icon}</a></li>)}
           </ul>
         </div>
         <div className="third_row">

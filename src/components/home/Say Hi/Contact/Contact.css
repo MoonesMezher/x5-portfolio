@@ -7,9 +7,8 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1050px) {
   .contact {
-    display: block;
-    background-color: #f9f9f9;
+    flex-direction: column;
   }
 }

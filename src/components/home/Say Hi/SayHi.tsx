@@ -1,11 +1,15 @@
 import "./SayHi.css";
 import Contact from "./Contact/Contact";
-import Title from "./Contact/Title/Title";
+import MainTitle from "../../shared/MainTitle/MainTitle";
+import Img from "../../../assets/images/home/aerial-view-man-using-computer-laptop-wooden-table.jpg";
+
 const SayHi = () => {
   return (
     <div className="sayhi">
-      <Title />
-      <Contact />
+      <div className="main-container">
+        <MainTitle img={Img} title="Say Hi" style="sayhi-title"/>
+        <Contact />
+      </div>
     </div>
   );
 };

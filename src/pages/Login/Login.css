@@ -1,3 +1,38 @@
 .login {
     background-color: #535da1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ne-login-card{
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+    transition: all ease 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+}
+.ne-login-card h1{
+    margin-bottom: 1.1rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+
+}
+
+.ne-login-card .login-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ne-login-card .login-btn .main-button {
+    background-color: #14b789;
+}
+
+.ne-login-card .login-btn .main-button:hover {
+    background-color: #535da1;
 }

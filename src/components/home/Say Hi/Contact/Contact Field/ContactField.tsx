@@ -1,75 +1,24 @@
+import { useState } from "react";
+import MainInput from "../../../../shared/MainInput/MainInput";
 import "./ContactField.css";
-import { AiOutlineGlobal } from "react-icons/ai";
-import { BsLightbulb } from "react-icons/bs";
-import { CiMobile2 } from "react-icons/ci";
-import { FaGoogle } from "react-icons/fa";
+import MainButton from "../../../../shared/MainButton/MainButton";
 
 const ContactField = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [body, setBody] = useState('');
+  const [error, setError] = useState({});
+
   return (
     <div className="contact_field">
-      <form action="#" method="get" role="form" className="contact_form">
-        <div className="first_line">
-          <input type="text" name="name" placeholder="Name" required />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            pattern="[^ @]*@[^ @]*"
-            placeholder="Email address"
-            required
-          />
+      <form method="post" role="form" className="contact_form">
+        <MainInput type={'text'} label="Name" errorRequest={error} value={name} setValue={setName} filed={'name'} required={true} placeholder={'Enter Your Name'}/>
+        <MainInput type={'email'} label="Email" errorRequest={error} value={email} setValue={setEmail} filed={'email'} required={true} placeholder={'Enter Your Email'}/>
+        <MainInput textarea={true} label="Message" errorRequest={error} value={body} setValue={setBody} filed={'body'} required={true} placeholder={'Enter Your Message'}/>
+        <div className="btn">
+          <MainButton title="Send" url="/"/>
         </div>
       </form>
-      <div className="checkbox-container">
-        <label className="checkbox-label">
-          <input type="checkbox" />
-          <div className="icon-with-text">
-            <i className="icon">
-              <AiOutlineGlobal />
-            </i>
-            <span className="text-description">Website</span>
-          </div>
-        </label>
-
-        <label className="checkbox-label">
-          <input type="checkbox" />
-          <div className="icon-with-text">
-            <i className="icon">
-              <BsLightbulb />
-            </i>
-            <span className="text-description">Branding</span>
-          </div>
-        </label>
-
-        <label className="checkbox-label">
-          <input type="checkbox" />
-          <div className="icon-with-text">
-            <i className="icon">
-              <CiMobile2 />
-            </i>
-            <span className="text-description">Ecommerce</span>
-          </div>
-        </label>
-
-        <label className="checkbox-label">
-          <input type="checkbox" />
-          <div className="icon-with-text">
-            <i className="icon">
-              <FaGoogle />
-            </i>
-            <span className="text-description">SEO</span>
-          </div>
-        </label>
-      </div>
-      <div className="text_box">
-        <textarea
-          name="message"
-          placeholder="Tell me about the project"
-        ></textarea>
-      </div>
-      <div className="send_button">
-        <button type="submit">send</button>
-      </div>
     </div>
   );
 };
