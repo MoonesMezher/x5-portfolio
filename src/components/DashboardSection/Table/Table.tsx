@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import './Table.css'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
+//firas
 const Table = () => {
     const [reload,setReload] = useState(1)
     const [data,setdata] = useState([])
