@@ -2,10 +2,53 @@ import { FaEdit, FaTrash } from 'react-icons/fa';
 import { TTableProps } from '../../../types';
 import { useParams } from 'react-router';
 import './Table.css'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const Table = ( { data } : TTableProps) => {
+    const [reload,setReload] = useState(1)
+    const [datas,setdatas] = useState([])
     const { section } = useParams();
 
+    useEffect(()=>{
+        if(section=='messages'){
+            axios.get(`http://127.0.0.1:8000/api/messages`)
+            .then(res=>{
+                setdatas(res.data.data);
+            })
+        }else{
+            axios.get(`http://127.0.0.1:8000/api/projects`)
+            .then(res=>{
+                setdatas(res.data.data);
+            })
+        }
+       
+    },[reload])
+    
+    const deleteMessage = async (id:BigInteger) => {
+        if(section=='messages'){
+            await axios.delete(`http://127.0.0.1:8000/api/messages/${id}`)
+            .then(res=>{
+             console.log(res)
+     
+            })
+             .catch(function(err){
+                 console.log(err)
+             })
+        }else{
+            await axios.delete(`http://127.0.0.1:8000/api/projects/${id}`)
+            .then(res=>{
+             console.log(res)
+     
+            })
+             .catch(function(err){
+                 console.log(err)
+             })
+        }
+
+        setReload(reload +1)
+    }
+    
     return (
         <div className="table-container">
         <table className="table">
@@ -32,7 +75,7 @@ const Table = ( { data } : TTableProps) => {
                 </tr>
             </thead>
             <tbody>
-            {data.map((item: any) => (
+            {datas.map((item: any) => (
                 <tr key={item.id}>
                     <td>{item.id}</td>
                     {section == 'projects' && <td><img src={item.img} alt={item.img}/></td>}
@@ -42,9 +85,9 @@ const Table = ( { data } : TTableProps) => {
                     <td className="actions">
                         {(section=='projects' && <>
                                 <FaEdit className='edit' size={18} onClick={() => console.log('Edit')} />
-                                <FaTrash className='trash' size={18} onClick={() => console.log('Delete')} />
+                                <FaTrash className='trash' size={18} onClick={() => deleteMessage(item.id)} />
                             </>
-                        ) || (section=='messages' && <FaTrash className='trash' size={18} onClick={() => console.log('Delete')} />)}
+                        ) || (section=='messages' && <FaTrash className='trash' size={18} onClick={() => deleteMessage(item.id)} />)}
                     </td>
                 </tr>
             ))}
