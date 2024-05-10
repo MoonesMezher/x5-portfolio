@@ -1,4 +1,8 @@
 import "./information.css";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 const Information = () => {
   return (
     <div className="information">

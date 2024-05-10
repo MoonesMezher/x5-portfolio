@@ -25,4 +25,7 @@
 
 #5 FIRAS ALSEMGY:
 
-#6 ESMAEEL ABD:
+#6 ESMAEL ABD:
+- Developed the Services section design, created a responsive layout that showcases the offers in a functional manners.
+- Developed Say Hi / Contact section design.
+- Utilized axios library to perform GET request to the api for retrieving user messages and to display the data on the dashboard.
