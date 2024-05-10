@@ -1,25 +1,24 @@
 import { FaEdit, FaTrash } from 'react-icons/fa';
-import { TTableProps } from '../../../types';
 import { useParams } from 'react-router';
 import './Table.css'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-const Table = ( { data } : TTableProps) => {
+const Table = () => {
     const [reload,setReload] = useState(1)
-    const [datas,setdatas] = useState([])
+    const [data,setdata] = useState([])
     const { section } = useParams();
 
     useEffect(()=>{
         if(section=='messages'){
             axios.get(`http://127.0.0.1:8000/api/messages`)
             .then(res=>{
-                setdatas(res.data.data);
+                setdata(res.data.data);
             })
         }else{
             axios.get(`http://127.0.0.1:8000/api/projects`)
             .then(res=>{
-                setdatas(res.data.data);
+                setdata(res.data.data);
             })
         }
        
@@ -75,7 +74,7 @@ const Table = ( { data } : TTableProps) => {
                 </tr>
             </thead>
             <tbody>
-            {datas.map((item: any) => (
+            {data.map((item: any) => (
                 <tr key={item.id}>
                     <td>{item.id}</td>
                     {section == 'projects' && <td><img src={item.img} alt={item.img}/></td>}
