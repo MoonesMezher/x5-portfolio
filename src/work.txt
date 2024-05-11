@@ -12,14 +12,17 @@
 - Make all components fit with eact other
 - Create Admin context
 - Handle login and logout functions (with api)
+- Handle edit project, create message (api)
 - Create (dashboard, dashboardSection)
 
 #2 NEVEN GHASOUN:
--Design MyProject section 
--design CardProject components 
-- use axios.post to push data in the projectRequest Component
+- Design MyProject section 
+- Design CardProject components 
+- Use axios.post to push data in the projectRequest Component
 
-#3 DIANA HAMAMEH:
+#3 DIANA HAMMAMEH:
+- Create Hero section
+- Handle create messages (api)
 
 #4 RAMI ALZEND:
 
