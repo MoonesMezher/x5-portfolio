@@ -19,8 +19,6 @@
 -design CardProject components 
 - use axios.post to push data in the projectRequest Component
 
-
-
 #3 DIANA HAMAMEH:
 
 #4 RAMI ALZEND:

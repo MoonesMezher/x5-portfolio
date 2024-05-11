@@ -17,3 +17,14 @@
 .project-request .main-button:hover {
     background-color: #535da1;
 }
+
+.project-request .main-input input[type="file"] {
+    display: none;
+}
+
+.project-request .main-input .file {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+}
