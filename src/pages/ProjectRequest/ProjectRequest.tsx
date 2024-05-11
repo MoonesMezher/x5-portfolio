@@ -114,6 +114,34 @@ const ProjectRequest = () => {
         }
     }
 
+    const handleCreateProject = (e) => {
+        e.preventDefault();
+
+        const formData = new FormData();
+        formData.append('title', title);
+        formData.append('category', category);
+
+    if (photo) {
+        formData.append('image', photo[0]);
+    }
+    // const data = {
+    //     title: title,
+    //     category: category,
+    //     image: photo
+    // }    
+
+    axios.post(API.POST.projects, formData, {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        },
+    }).then(res => {
+        console.log(res.data);
+    }).catch( (err) => {
+        console.log(err.response.data);
+      // Handle the error, e.g., display an error message to the user
+    })
+    }
+
     return (
         <section className="page project-request">
             <div className="main-container">
@@ -125,7 +153,7 @@ const ProjectRequest = () => {
                         <label>Image</label>
                         <div className='file'>
                             <div onClick={handleAddImage} >
-                                <MainButton title='Enter An Image' url='#'/>
+                                <MainButton type='button' title='Enter An Image' url='#'/>
                             </div>
                         </div>
                         <input ref={file} type='file' accept='image/*' onChange={(e) => setPhoto(e.target.files)} placeholder='Enter a photo' required/>
@@ -134,8 +162,8 @@ const ProjectRequest = () => {
                         <MainButton title={id? 'Update': "Add"} url='#'/>
                     </div>
                 </form>
+                <Loading loading={loading}/>
             </div>
-            <Loading loading={loading}/>
         </section>
     )
 }

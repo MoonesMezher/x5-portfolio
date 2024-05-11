@@ -5,6 +5,7 @@ import MyStory from "../../components/home/MyStory/MyStory";
 import SayHi from "../../components/home/Say Hi/SayHi";
 import Services from "../../components/home/Services/Services";
 import Information from "../../components/home/Information/Information";
+
 import "./Home.css";
 
 const Home = () => {
