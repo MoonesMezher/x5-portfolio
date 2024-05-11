@@ -23,8 +23,27 @@
     opacity: 90%;
 }
 
+.table tbody tr img {
+    width: 20px;
+    height: 20px;
+}
+
 .table tbody tr:hover {
     opacity: 100%;
+}
+
+.table-container .message-show {
+    background-color: white;
+    padding: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 200px;
+    word-wrap: break-word;
+    border-radius: 10px;
+    z-index: 10;
+    transform: translate(-50%, -50%);
 }
 
 .table td {

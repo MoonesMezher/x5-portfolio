@@ -40,6 +40,10 @@ function App() {
               element={admin ? <ProjectRequest /> : <Navigate to={"error"} />}
             />
             <Route
+              path="/dashboard/project-request/:id"
+              element={admin ? <ProjectRequest /> : <Navigate to={"error"} />}
+            />
+            <Route
               path="/dashboard/:section"
               element={admin ? <DashboardSection /> : <Navigate to={"error"} />}
             />
