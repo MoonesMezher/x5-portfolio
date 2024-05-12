@@ -12,3 +12,7 @@
     gap: 1rem;
     margin-top: 3rem;
 }
+
+.not-found {
+    text-align: center;
+}

@@ -9,6 +9,7 @@ import axios from "axios";
 import API from "../../api/axios";
 import { useAdminContext } from "../../hooks/useAdminContext";
 import { useNavigate } from "react-router";
+import Loading from "../../components/shared/Loading/Loading";
 
 const Dashboard = () => {
   const [alert, setAlert] = useState<boolean>(false);

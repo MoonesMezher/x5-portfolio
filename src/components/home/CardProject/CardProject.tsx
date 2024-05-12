@@ -7,7 +7,7 @@ function CardProject({ category,title, image} : { category: string, title: strin
             <p> {category} </p>
             <h3> {title} </h3>
         </div>
-        <img src={image} alt="" />
+        <img src={'http://127.0.0.1:8000/images/'+image} alt="" />
     </div>
   )
 }

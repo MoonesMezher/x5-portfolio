@@ -2,6 +2,7 @@ const API = {
     GET: {
         messages: 'http://127.0.0.1:8000/api/messages',
         projects: 'http://127.0.0.1:8000/api/projects',
+        images: 'http://127.0.0.1:8000/api/image/'
     },
     POST: {
         messages: 'http://127.0.0.1:8000/api/messages',
