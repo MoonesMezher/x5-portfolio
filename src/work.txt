@@ -29,3 +29,6 @@
 #5 FIRAS ALSEMGY:
 
 #6 ESMAEEL ABD:
+- Developed the Services section design
+- Created a responsive layout that showcases the offers in a functional manners.
+- Developed Say Hi / Contact section design.
