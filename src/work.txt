@@ -12,20 +12,23 @@
 - Make all components fit with eact other
 - Create Admin context
 - Handle login and logout functions (with api)
+- Handle edit project, create message (api)
 - Create (dashboard, dashboardSection)
 
 #2 NEVEN GHASOUN:
--Design MyProject section 
--design CardProject components 
-- use axios.post to push data in the projectRequest Component
+- Design MyProject section 
+- Design CardProject components 
+- Use axios.post to push data in the projectRequest Component
 
-#3 DIANA HAMAMEH:
+#3 DIANA HAMMAMEH:
+- Create Hero section
+- Handle create messages (api)
 
 #4 RAMI ALZEND:
 
 #5 FIRAS ALSEMGY:
 
-#6 ESMAEL ABD:
-- Developed the Services section design, created a responsive layout that showcases the offers in a functional manners.
+#6 ESMAEEL ABD:
+- Developed the Services section design
+- Created a responsive layout that showcases the offers in a functional manners.
 - Developed Say Hi / Contact section design.
-- Utilized axios library to perform GET request to the api for retrieving user messages and to display the data on the dashboard.

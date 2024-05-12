@@ -18,8 +18,6 @@ function App() {
 
   const { admin } = state;
 
-  console.log(admin);
-
   return (
     <div>
       <main>
@@ -47,6 +45,7 @@ function App() {
               path="/dashboard/:section"
               element={admin ? <DashboardSection /> : <Navigate to={"error"} />}
             />
+            
             <Route path="*" element={<Navigate to={"error"} />} />
             <Route path="/error" element={<ErrorPage />} />
           </Routes>

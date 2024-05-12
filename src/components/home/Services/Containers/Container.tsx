@@ -50,6 +50,7 @@ const Container = () => {
         return (
           <div key={index}>
             <Card
+              key={index}
               service={element.service}
               price={element.price}
               brief={element.brief}

@@ -8,18 +8,21 @@ import MainTitle from '../../shared/MainTitle/MainTitle'
 import axios from "axios";
 import API from "../../../api/axios";
 import { useEffect, useState } from "react";
+import Loading from "../../shared/Loading/Loading";
 function MyProject() {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<any>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    setLoading(true);
     axios.get(API.GET.projects)
-    .then((res) => {
-      console.log(res);
-      
+    .then((res) => {      
+      setLoading(false);
       setProjects(res.data.data);
     })
     .catch((error) => {
-      console.log("error getting projects", error);
+      setLoading(false);
+      // console.log("error getting projects", error);
     });
   }, []);
 
@@ -32,14 +35,15 @@ function MyProject() {
           {projects?.map((e, i) => (
             i <= 2 &&
             <CardProject
-            key={i}
-            category={e?.category}
-            title={e?.title}
-            image={e?.image}
+              key={i}
+              category={e?.category}
+              title={e?.title}
+              image={e?.image}
             />
           ))}
         </div>
       </div>
+      <Loading loading={loading}/>
     </div>
   );
 }

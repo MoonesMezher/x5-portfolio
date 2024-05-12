@@ -15,14 +15,10 @@ export const AdminContext = createContext<{ state: TState; dispatch: Dispatch<TA
     dispatch: () => {}
 });
 
-const adminReducer = (state : TState, action: TAction ) => {
-    console.log(state, action.type);
-    
+const adminReducer = (state : TState, action: TAction ) => {    
     switch(action.type) {
         case "LOGIN": 
-            localStorage.setItem('admin', 'true');
-            console.log(state);
-            
+            localStorage.setItem('admin', 'true');            
             return {
                 admin: true
             };

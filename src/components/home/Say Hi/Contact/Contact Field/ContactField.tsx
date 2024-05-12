@@ -5,7 +5,6 @@ import MainButton from "../../../../shared/MainButton/MainButton";
 import axios from "axios";
 import API from "../../../../../api/axios";
 import Loading from "../../../../shared/Loading/Loading";
-import { useNavigate } from "react-router";
 
 const ContactField = () => {
   const [name, setName] = useState<string>('');
@@ -14,8 +13,6 @@ const ContactField = () => {
   const [error, setError] = useState({});
   const [loading, setLoading] = useState<boolean>(false);
   
-  const navigate = useNavigate();
-
   const handleSendMessage = () => {
     const data = {
       name: name,
@@ -49,7 +46,7 @@ const ContactField = () => {
         <MainInput type={'email'} label="Email" errorRequest={error} value={email} setValue={setEmail} filed={'email'} required={true} placeholder={'Enter Your Email'}/>
         <MainInput textarea={true} label="Message" errorRequest={error} value={body} setValue={setBody} filed={'body'} required={true} placeholder={'Enter Your Message'}/>
         <div className="btn" onClick={handleSendMessage}>
-          <MainButton title="Send" url="/"/>
+          <MainButton type="" title="Send" url="/"/>
         </div>
       </form>
     </div>

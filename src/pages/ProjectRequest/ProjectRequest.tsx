@@ -43,8 +43,8 @@ const ProjectRequest = () => {
         file.current.click();
     }
     
-    const handleCreateOrUpdateProject = (e: any) => {
-        setLoading(true);
+    const handleCreateOrUpdateProject = async (e: any) => {
+        // setLoading(true);
 
         e.preventDefault();         
 
@@ -53,36 +53,20 @@ const ProjectRequest = () => {
         if(id) {
             // const data = new FormData();            formData.delete('title');
             formData.append('title', title);
-            formData.append('category', category);
+            formData.append('category', category);                  
             
-            if (photo) {
-                formData.append('image', photo[0]);
-            }                   
-            
-            console.log(formData.get('title'));
             const data = {
                 title: formData.get('title'),
                 category: formData.get('category'),
-                image: formData.get('image'),
             }
-
-            console.log(data);
             
-            axios.patch(API.PUT.projects+id, data, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-                
-            }).then(res => {                
-                console.log(res.data);
-                
+            axios.put(API.PUT.projects+id, data).then(res => {                
                 setError({});
                 setLoading(false);
                 navigate('/dashboard/projects');
             }).catch( (err) => {
                 setError({});
-                console.log(err.response.data);
-
+                
                 if(err.response.data.errors) {
                     setError(err.response.data.errors);
                 }
@@ -114,34 +98,6 @@ const ProjectRequest = () => {
         }
     }
 
-    const handleCreateProject = (e) => {
-        e.preventDefault();
-
-        const formData = new FormData();
-        formData.append('title', title);
-        formData.append('category', category);
-
-    if (photo) {
-        formData.append('image', photo[0]);
-    }
-    // const data = {
-    //     title: title,
-    //     category: category,
-    //     image: photo
-    // }    
-
-    axios.post(API.POST.projects, formData, {
-        headers: {
-            'Content-Type': 'multipart/form-data',
-        },
-    }).then(res => {
-        console.log(res.data);
-    }).catch( (err) => {
-        console.log(err.response.data);
-      // Handle the error, e.g., display an error message to the user
-    })
-    }
-
     return (
         <section className="page project-request">
             <div className="main-container">
@@ -149,7 +105,7 @@ const ProjectRequest = () => {
                 <form method="POST">
                     <MainInput filed='title' setValue={setTitle} value={title} errorRequest={error} label='Title' placeholder='A Title' required={true} type='text'/>
                     <MainInput filed='category' setValue={setCategory} value={category} errorRequest={error} label='Category' placeholder='A Category' required={true} type='text'/>
-                    <div className='main-input'>
+                    {!id && <div className='main-input'>
                         <label>Image</label>
                         <div className='file'>
                             <div onClick={handleAddImage} >
@@ -157,9 +113,9 @@ const ProjectRequest = () => {
                             </div>
                         </div>
                         <input ref={file} type='file' accept='image/*' onChange={(e) => setPhoto(e.target.files)} placeholder='Enter a photo' required/>
-                    </div>
+                    </div>}
                     <div onClick={handleCreateOrUpdateProject}>
-                        <MainButton title={id? 'Update': "Add"} url='#'/>
+                        <MainButton type='' title={id? 'Update': "Add"} url='#'/>
                     </div>
                 </form>
                 <Loading loading={loading}/>

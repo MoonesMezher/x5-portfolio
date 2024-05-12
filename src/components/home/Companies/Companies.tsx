@@ -13,7 +13,7 @@ const Companies = () => {
             <div className='main-container'>
                 <h1 className='font-2'>Companies I've had worked</h1>
                 <div className='mm-companies-grid'>
-                    {imgs.map((e, i) => <img src={e} alt={e} loading='lazy'/>)}
+                    {imgs.map((e, i) => <img key={i} src={e} alt={e} loading='lazy'/>)}
                 </div>
             </div>
         </div>
